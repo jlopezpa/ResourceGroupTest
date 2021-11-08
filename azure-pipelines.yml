@@ -1,0 +1,14 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: AzurePowerShell@5
+  inputs:
+    azureSubscription: '2e39dc9c-a38f-475c-aa16-dfb68153287b'
+    ScriptType: 'FilePath'
+    ScriptPath: './Deploy-AzTemplate.ps1'
+    ScriptArguments: -Location 'westeurope' -ResourceGroupName 'demogroup' -TemplateFile templates\mainTemplate.json
+    azurePowerShellVersion: 'LatestVersion'
