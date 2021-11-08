@@ -9,6 +9,6 @@ steps:
   inputs:
     azureSubscription: 'myconnection'
     ScriptType: 'FilePath'
-    ScriptPath: 'ResourceGroupTest/Deploy-AzTemplate.ps1'
+    ScriptPath: '/ResourceGroupTest/Deploy-AzTemplate.ps1'
     ScriptArguments: -Location 'centralus' -ResourceGroupName 'demogroup'
     azurePowerShellVersion: 'LatestVersion'
