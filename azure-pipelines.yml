@@ -5,10 +5,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: AzurePowerShell@3
+- task: AzurePowerShell@5
   inputs:
     azureSubscription: 'myconnection'
     ScriptType: 'FilePath'
-    ScriptPath: './Deploy-AzTemplate.ps1'
-    ScriptArguments: -Location 'centralus' -ResourceGroupName 'demogroup' -TemplateFile templates\mainTemplate.json
+    ScriptPath: 'ResourceGroupTest/Deploy-AzTemplate.ps1'
+    ScriptArguments: -Location 'centralus' -ResourceGroupName 'demogroup'
     azurePowerShellVersion: 'LatestVersion'
