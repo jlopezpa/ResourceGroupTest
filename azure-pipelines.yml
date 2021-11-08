@@ -12,6 +12,7 @@ pool:
 
 steps:
 - checkout: self
+
 - task: AzureResourceGroupDeployment@2
   inputs:
     azureSubscription: 'myconnection0' 
