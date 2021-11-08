@@ -10,5 +10,5 @@ steps:
     azureSubscription: 'myconnection '
     ScriptType: 'FilePath'
     ScriptPath: './Deploy-AzTemplate.ps1'
-    ScriptArguments: -Location 'westeurope' -ResourceGroupName 'demogroup' -TemplateFile templates\mainTemplate.json
+    ScriptArguments: -Location 'westus' -ResourceGroupName 'demogroup' -TemplateFile templates\mainTemplate.json
     azurePowerShellVersion: 'LatestVersion'
