@@ -8,10 +8,9 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+ # - checkout: self
 
 steps:
-- checkout: self
 
 - task: AzureResourceGroupDeployment@2
   inputs:
