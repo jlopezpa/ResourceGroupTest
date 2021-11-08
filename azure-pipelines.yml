@@ -7,7 +7,7 @@ pool:
 steps:
 - task: AzurePowerShell@5
   inputs:
-    azureSubscription: '2e39dc9c-a38f-475c-aa16-dfb68153287b'
+    azureSubscription: 'myconnection '
     ScriptType: 'FilePath'
     ScriptPath: './Deploy-AzTemplate.ps1'
     ScriptArguments: -Location 'westeurope' -ResourceGroupName 'demogroup' -TemplateFile templates\mainTemplate.json
