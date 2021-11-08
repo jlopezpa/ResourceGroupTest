@@ -10,7 +10,7 @@ jobs:
           - task: AzureCLI@2
             displayName: 'Deploy Resource Group'
             inputs:
-              azureSubscription: 'myconnection'
+              azureSubscription: 'myconnection2'
               scriptType: bash
               scriptLocation: inlineScript
               addSpnToEnvironment: true
