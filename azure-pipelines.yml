@@ -8,15 +8,10 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-environment : Dev
-strategy:
-runOnce:
-  deploy:
-  steps:
-  - checkout: self
+
 
 steps:
-
+- checkout: self
 - task: AzureResourceGroupDeployment@2
   inputs:
     azureSubscription: 'myconnection0' 
