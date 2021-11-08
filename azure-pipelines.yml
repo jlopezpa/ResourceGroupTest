@@ -4,11 +4,16 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-- task: AzurePowerShell@5
-  inputs:
-    azureSubscription: 'myconnection'
-    ScriptType: 'FilePath'
-    ScriptPath: '/ResourceGroupTest/Deploy-AzTemplate.ps1'
-    ScriptArguments: -Location 'centralus' -ResourceGroupName 'demogroup'
-    azurePowerShellVersion: 'LatestVersion'
+jobs:
+  - job: azcli_resourcegroup_create
+    steps:
+          - task: AzureCLI@2
+            displayName: 'Deploy Resource Group'
+            inputs:
+              azureSubscription: 'Azure subscription 1'
+              scriptType: bash
+              scriptLocation: inlineScript
+              addSpnToEnvironment: true
+              inlineScript: |
+                #!/bin/bash
+                az group create -l westeurope -n mydemorg
