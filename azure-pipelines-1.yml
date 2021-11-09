@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'centos-latest'
 
 steps:
 #- task: AzureResourceGroupDeployment@2
@@ -39,12 +39,10 @@ steps:
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'prueba123'
     location: 'West Europe'
-    templateLocation: 'Linked artifact'
-    csmFile: 'https://github.com/Azure/azure-quickstart-templates/blob/master/application-workloads/mongo/mongodb-on-centos/azuredeploy.json'
-    csmParametersFile: 'https://github.com/Azure/azure-quickstart-templates/blob/master/application-workloads/mongo/mongodb-on-centos/azuredeploy.parameters.json'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/Azure/azure-quickstart-templates/blob/master/application-workloads/mongo/mongodb-on-centos/azuredeploy.json'
+    csmParametersFileLink: 'https://github.com/Azure/azure-quickstart-templates/blob/master/application-workloads/mongo/mongodb-on-centos/azuredeploy.parameters.json'
     deploymentMode: 'Incremental'
-    deploymentName: 'mongodbreplica'
-    addSpnToEnvironment: true
 
   condition: always()
   continueOnError: true
