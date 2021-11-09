@@ -5,11 +5,16 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: AzureResourceGroupDeployment@2
+- task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    ConnectedServiceName: 'myconnection0'
+    deploymentScope: 'Resource Group'
+    azureResourceManagerConnection: 'myconnection'
+    subscriptionId: '2e39dc9c-a38f-475c-aa16-dfb68153287b'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: $(resourceGroupName)
-    location: 'North Europe'
+    resourceGroupName: 'prueba123'
+    location: 'West Europe'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://github.com/jlopezpa/ResourceGroupTest/blob/main/StorageAccount/azuredeploy.json'
+    overrideParameters: '-projectName PipelineDev'
     deploymentMode: 'Incremental'
-    csmFile: '$(System.DefaultWorkingDirectory)/**/azuredeploy.json'
+    deploymentName: 'DeployTemplateTest'
