@@ -14,9 +14,9 @@ steps:
     resourceGroupName: 'prueba123'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/Azure/azure-docs-json-samples/master/get-started-deployment/linked-template/azuredeploy.json'
+    csmFileLink: 'https://raw.githubusercontent.com/jlopezpa/ResourceGroupTest/main/StorageAccount/azuredeploy.json?token=AWLMDJP7GBBRQZF3PZ5TXYDBRLXBM'
     overrideParameters: '-projectName PipelineDev'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployTemplateTest'
-  condition: always()
+  #condition: always()
   continueOnError: true
