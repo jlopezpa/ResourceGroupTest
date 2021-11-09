@@ -14,7 +14,7 @@ steps:
     templateLocation: 'Linked artifact' # Options: linked Artifact, uRL Of The File
     #csmFileLink: # Required when templateLocation == URL Of The File
     #csmParametersFileLink: # Optional
-    csmFile: '/home/vsts/work/_tasks/AzureResourceGroupDeployment_94a74903-f93f-4075-884f-dc11f34058b4/2.192.1/node_modules/azure-pipelines-tasks-azure-arm-rest-v2/module.json'# Required when  TemplateLocation == Linked Artifact
+    csmFile: '$(Build.SourcesDirectory)/**/azureDeploy.json' # Required when  TemplateLocation == Linked Artifact
     #csmParametersFile: # Optional
     #overrideParameters: # Optional
     deploymentMode: 'Incremental' # Options: Incremental, Complete, Validate
