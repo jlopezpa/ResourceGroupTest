@@ -15,7 +15,6 @@ steps:
     location: 'West Europe'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/jlopezpa/ResourceGroupTest/main/StorageAccount/linkedStorageAccount.json?token=AWLMDJKGDEWKLTQP6GMU57DBRLXOW'
-    overrideParameters: '-projectName PipelineDev'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployTemplateTest'
   #condition: always()
