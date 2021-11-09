@@ -14,7 +14,7 @@ steps:
     resourceGroupName: 'prueba123'
     location: 'West Europe'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/jlopezpa/ResourceGroupTest/main/StorageAccount/azuredeploy.json?token=AWLMDJPKQS3YF2TDI3APSC3BRLX6W'
+    csmFileLink: 'https://raw.githubusercontent.com/jlopezpa/ResourceGroupTest/main/StorageAccount/azuredeploy.json'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployTemplateTest'
   #condition: always()
