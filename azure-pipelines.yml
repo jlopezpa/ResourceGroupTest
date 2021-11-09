@@ -15,6 +15,7 @@ steps:
     location: 'West Europe'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/jlopezpa/ResourceGroupTest/main/StorageAccount/azuredeploy.json'
+    overrideParameters: '-projectName ProjectTest'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployTemplateTest'
   #condition: always()
