@@ -1,0 +1,38 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - 
+- task: AzureResourceGroupDeployment@2
+  inputs:
+    azureSubscription: 'myconnection0'
+    action: 'Create Or Update Resource Group' # Options: create Or Update Resource Group, select Resource Group, start, stop, stopWithDeallocate, restart, delete, deleteRG
+    resourceGroupName: 'nametest' 
+    location: 'westeurope'# Required when action == Create Or Update Resource Group
+    #templateLocation: 'Linked artifact' # Options: linked Artifact, uRL Of The File
+    #csmFileLink: # Required when templateLocation == URL Of The File
+    #csmParametersFileLink: # Optional
+    #csmFile: # Required when  TemplateLocation == Linked Artifact
+    #csmParametersFile: # Optional
+    #overrideParameters: # Optional
+    deploymentMode: 'Incremental' # Options: Incremental, Complete, Validate
+    #enableDeploymentPrerequisites: 'None' # Optional. Options: none, configureVMwithWinRM, configureVMWithDGAgent
+    #teamServicesConnection: # Required when enableDeploymentPrerequisites == ConfigureVMWithDGAgent
+    #teamProject: # Required when enableDeploymentPrerequisites == ConfigureVMWithDGAgent
+    #deploymentGroupName: # Required when enableDeploymentPrerequisites == ConfigureVMWithDGAgent
+    #copyAzureVMTags: true # Optional
+    #runAgentServiceAsUser: # Optional
+    #userName: # Required when enableDeploymentPrerequisites == ConfigureVMWithDGAgent && RunAgentServiceAsUser == True
+    #password: # Optional
+    #outputVariable: # Optional
+    #deploymentName: # Optional
+    #deploymentOutputs: # Optional
+    #addSpnToEnvironment: false # Optional
