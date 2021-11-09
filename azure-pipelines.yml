@@ -12,3 +12,4 @@ steps:
     resourceGroupName: $(resourceGroupName)
     location: 'North Europe'
     deploymentMode: 'Incremental'
+    csmFile: $(cmsFile)
