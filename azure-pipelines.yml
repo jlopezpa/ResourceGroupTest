@@ -18,3 +18,5 @@ steps:
     overrideParameters: '-projectName PipelineDev'
     deploymentMode: 'Incremental'
     deploymentName: 'DeployTemplateTest'
+  condition: always()
+  continueOnError: true
