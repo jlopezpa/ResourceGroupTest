@@ -30,3 +30,6 @@ steps:
     #deploymentName: # Optional
     #deploymentOutputs: # Optional
     #addSpnToEnvironment: false # Optional
+  condition: always()
+  continueOnError: true
+  
