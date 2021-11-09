@@ -9,8 +9,6 @@ steps:
   inputs:
     ConnectedServiceName: 'myconnection0'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'KensTestRG'
+    resourceGroupName: $(resourceGroupName)
     location: 'North Europe'
-    templateLocation: 'Linked artifact'
-    csmFile: '**/azuredeploy.json'
     deploymentMode: 'Incremental'
