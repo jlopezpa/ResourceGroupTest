@@ -12,9 +12,4 @@ steps:
     resourceGroupName: $(resourceGroupName)
     location: 'North Europe'
     deploymentMode: 'Incremental'
-    csmFile: $(cmsFile)
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    projects: '$(solution)'
-    arguments: '--output $(Build.ArtifactStagingDirectory)'
+    csmFile: '$(System.DefaultWorkingDirectory)/**/azuredeploy.json'
